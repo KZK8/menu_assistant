@@ -52,4 +52,4 @@
 
 - **XAMPP**: このアプリはXAMPP環境下（`htdocs`フォルダ）で動作します。
 
-サンプルユーザーID:sample@gmail.com PASSWORD:sample0000
+サンプルユーザーID:sample@sample.com PASSWORD:sample0000
