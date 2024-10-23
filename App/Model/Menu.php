@@ -33,7 +33,7 @@ class Menu extends Base
      */
     public function eat_list($user_id)
     {
-        $sql = 'SELECT eat_history.id AS eat_id, eat_history.eat_date, eat_history.category AS category, eat_history.total_kcal, main.name AS main_name, sub.name AS sub_name, main.id AS main_id, sub.id AS sub_id FROM eat_history JOIN main ON eat_history.main_id = main.id JOIN sub ON eat_history.sub_id = sub.id JOIN users ON eat_history.user_id = users.id WHERE user_id = :user_id AND eat_history.is_deleted = 0 ORDER BY eat_date ASC';
+        $sql = 'SELECT eat_history.id AS eat_id, eat_history.eat_date, eat_history.category AS category, eat_history.total_kcal, main.name AS main_name, sub.name AS sub_name, main.id AS main_id, sub.id AS sub_id FROM eat_history JOIN main ON eat_history.main_id = main.id JOIN sub ON eat_history.sub_id = sub.id JOIN users ON eat_history.user_id = users.id WHERE user_id = :user_id AND eat_history.is_deleted = 0 ORDER BY eat_date DESC';
         $stmt = $this->dbh->prepare($sql);
         $stmt->bindValue(':user_id', $user_id, \PDO::PARAM_INT);
         $stmt->execute();
