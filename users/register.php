@@ -22,7 +22,7 @@ unset($_SESSION['msg']['error']);
 </head>
 
 <body>
-    <div class="container">
+    <div class="container my-5">
         <h1>新規会員登録</h1>
 
         <?php if (isset($_SESSION['msg']['error'])) : ?>

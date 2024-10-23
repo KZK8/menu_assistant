@@ -19,7 +19,7 @@ $token = Common::generateToken();
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1>ログイン</h1>
         <form action="./login_action.php" method="post">
             <input type="hidden" name="token" value="<?php echo $token ?>">
